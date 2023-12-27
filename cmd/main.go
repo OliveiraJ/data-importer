@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"encoding/csv"
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("Print")
+	file, err := os.Open("../file/clientes.csv")
+	if err != nil {
+		fmt.Println(err)
+	}
+	reader := csv.NewReader(file)
+	records, _ := reader.ReadAll()
+
+	fmt.Println(records)
 }
