@@ -1,6 +1,3 @@
-/*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-*/
 package validate
 
 import (
@@ -8,21 +5,6 @@ import (
 
 	"github.com/spf13/cobra"
 )
-
-// fornecedorCmd represents the fornecedor command
-// var fornecedorCmd = &cobra.Command{
-// 	Use:   "fornecedor",
-// 	Short: "A brief description of your command",
-// 	Long: `A longer description that spans multiple lines and likely contains examples
-// and usage of using your command. For example:
-
-// Cobra is a CLI library for Go that empowers applications.
-// This application is a tool to generate the needed files
-// to quickly create a Cobra application.`,
-// 	Run: func(cmd *cobra.Command, args []string) {
-// 		fmt.Println("fornecedor called")
-// 	},
-// }
 
 func validateFornecedor() *cobra.Command {
 	fornecedorCmd := &cobra.Command{
@@ -43,17 +25,3 @@ to quickly create a Cobra application.`,
 
 	return fornecedorCmd
 }
-
-// func init() {
-// 	validateCmd.AddCommand(fornecedorCmd)
-// 	fornecedorCmd.Flags().BoolVarP(&report, "relatório", "r", false, "Se um relatório de consistência deve ser gerado")
-// 	// Here you will define your flags and configuration settings.
-
-// 	// Cobra supports Persistent Flags which will work for this command
-// 	// and all subcommands, e.g.:
-// 	// fornecedorCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-// 	// Cobra supports local flags which will only run when this command
-// 	// is called directly, e.g.:
-// 	// fornecedorCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-// }
