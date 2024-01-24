@@ -4,9 +4,10 @@ Copyright © 2024 NAME HERE <EMAIL ADDRESS>
 package root
 
 import (
-	"OliveiraJ/importer/cmd/validate"
 	"fmt"
 	"os"
+
+	"github.com/OliveiraJ/data-importer/cmd/validate"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

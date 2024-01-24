@@ -1,4 +1,4 @@
-module OliveiraJ/importer
+module github.com/OliveiraJ/data-importer
 
 go 1.21.3
 
