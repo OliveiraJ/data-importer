@@ -3,6 +3,8 @@ package validate
 import (
 	"fmt"
 
+	"github.com/OliveiraJ/data-importer/file"
+	"github.com/OliveiraJ/data-importer/internal/schema"
 	"github.com/spf13/cobra"
 )
 
@@ -19,8 +21,12 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Println("cliente called")
-			fmt.Println(report)
+
+			customers := []schema.Customer{}
+
+			file.ReadFile(&customers)
+
+			fmt.Println(customers)
 
 		},
 	}

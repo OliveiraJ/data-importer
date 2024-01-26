@@ -3,6 +3,7 @@ module github.com/OliveiraJ/data-importer
 go 1.21.3
 
 require (
+	github.com/gocarina/gocsv v0.0.0-20231116093920-b87c2d0e983a
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
 )
