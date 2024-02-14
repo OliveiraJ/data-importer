@@ -5,11 +5,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/OliveiraJ/data-importer/internal/schema"
 	"github.com/gocarina/gocsv"
 	"github.com/spf13/viper"
 )
 
-func ReadFile(registers interface{}) {
+// Reads file and unmarshal the data into the provided struct (entity)
+func ReadFile[R *[]schema.Customer | *[]schema.Supplier | *[]schema.People](registers R) {
 	fmt.Println("path: ", viper.GetString("pathFile"))
 
 	file, err := os.Open(viper.GetString("pathFile"))
